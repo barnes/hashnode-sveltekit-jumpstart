@@ -1,0 +1,13 @@
+:root {
+    --pico-font-family-sans-serif: 'Fira Sans', sans-serif;
+    --pico-spacing: 1rem;
+}
+
+body {
+}
+
+.post-content img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
