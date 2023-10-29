@@ -5,7 +5,6 @@ import { HN_TOKEN, DEV_PUB_ID, PUB_ID, DUMMY } from '$env/static/private';
 export const prerender = true;
 
 export const load = (async () => {
-  console.log(typeof DUMMY);
 	let id = PUB_ID;
 	if (DUMMY === 'true') {
 		id = DEV_PUB_ID;
