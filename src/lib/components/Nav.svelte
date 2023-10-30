@@ -1,11 +1,9 @@
 <script lang="ts">
 	import Menu from './Menu.svelte';
-	import TagToggle from './TagToggle.svelte';
-	
+
 	export let pages;
 	export let metadata;
 	export let tags;
-	console.log(metadata.about)
 </script>
 
 <header class="nav-menu">
@@ -18,7 +16,7 @@
 				{/if}
 			</header>
 			<body>
-				<Menu {pages} />
+				<Menu {pages} {tags} />
 			</body>
 		</article>
 	</nav>

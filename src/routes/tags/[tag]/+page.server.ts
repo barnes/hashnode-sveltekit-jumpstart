@@ -5,7 +5,6 @@ import { HN_TOKEN, DUMMY, PUB_ID, DEV_PUB_ID } from '$env/static/private';
 export const prerender = true;
 
 export const load = (async ({params}) => {
-  console.log('LOADING NEW TAG PAGE: ' + params.tag)
   let tag = params.tag
   let id = PUB_ID;
 	if (DUMMY === 'true') {

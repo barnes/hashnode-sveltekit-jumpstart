@@ -3,7 +3,6 @@
 	import PostCard from '$lib/components/PostCard.svelte';
 	export let data: PageData;
 
-	console.log(data.posts);
 	let posts = data.posts.publication.posts.edges;
 </script>
 

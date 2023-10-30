@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { Moon } from 'lucide-svelte';
-	import TagToggle from './TagToggle.svelte';
+	import Tags from '$lib/components/Tags.svelte'
 	const setTheme = () => {
 		let current = document.querySelector('html')?.getAttribute('data-theme');
-		console.log(current);
 		if (current == 'light') {
 			document.querySelector('html')?.setAttribute('data-theme', 'dark');
 		} else {
@@ -16,29 +15,29 @@
 	
 </script>
 
-<ul class="menu">
-	<li role='button' on:click={setTheme}>
+<div class="menu">
+	<div role='button' on:click={setTheme}>
 		<Moon />
-	</li>
+	</div>
 	{#if pages.length > 0}
 		{#each pages as page}
-		<li><a role="button" href="pages/{page.node.slug}">{page.node.title}</a></li>
+		<a role="button" href="/pages/{page.node.slug}">{page.node.title}</a>
 		{/each}
 	{/if}
-	<TagToggle {tags}/>
-</ul>
+	<Tags {tags}/>
+</div>
 
 <style>
 	.menu {
 		display: flex;
 		flex-direction: column;
 		gap: var(--pico-spacing);
-		align-items: start;
+		align-items: center;
 		padding-bottom: var(--pico-spacing);
 	}
 	@media only screen and (max-width: 1000px) {
 		.menu {
-			display: none;
+			flex-direction: row;	
 		}
 	}
 </style>

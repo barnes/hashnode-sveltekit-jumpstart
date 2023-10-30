@@ -4,9 +4,7 @@
     import '@fontsource/fira-sans';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
-	import ResMenu from '$lib/components/ResMenu.svelte';
 	import github from 'svelte-highlight/styles/github';
-	import TagToggle from '$lib/components/TagToggle.svelte';
 
 	export let data;
 
@@ -34,7 +32,6 @@
 <main class="container-fluid">
 	<div class="content">
 		<Nav {pages} {metadata} {tags}/>
-		<ResMenu {pages} {tags}/>
 		<div class="slot">
 			<slot />
 		</div>
