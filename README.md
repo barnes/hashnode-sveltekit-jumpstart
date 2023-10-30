@@ -21,16 +21,13 @@ Our .env needs a few values:
 ## Routes
 
 - Index route displays posts.
-- [slug] route will display a single post given it's slug from the URL param.
+- posts/[slug] route will display a single post given it's slug from the URL param.
 - tag/[tag] route will list all posts of a given tag from the URL param.
 - pages/[page] route will display a page from Hashnode.
 - +layout handles the overall layout, as well as fetching our pages and tags.
 
-## TODO:
+## Next Steps
 
-- Implement tests
-- Clean up the nav / menu / res menu / tags non-sense.
-- Tag links still don't re-load.
-- Github actions workflow
-- Deployment to Vercel
-- Blog Post
+- More dynamic / interesting styling. Global styles can defined in global.css, specific styles can live in components / routes.
+- Build up more robust testing
+- Deployment workflow.
